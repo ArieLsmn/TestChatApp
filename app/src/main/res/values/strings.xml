@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestChatApp</string>
+    <string name="title_activity_fetch_public_key">FetchPublicKey</string>
+</resources>
