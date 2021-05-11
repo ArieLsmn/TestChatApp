@@ -85,8 +85,9 @@ public class ArrUtil {
         return arrays; // that's it
     }
 
-    public  static int[] reverseArr(int arrIn[], int lengthVal)
+    public  static int[] reverseArr(int arrIn[])
     {
+        int lengthVal=arrIn.length;
         int[] revArr = new int[lengthVal];
         int j = lengthVal;
         for (int i = 0; i < lengthVal; i++) {

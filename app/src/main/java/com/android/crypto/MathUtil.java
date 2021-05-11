@@ -37,7 +37,7 @@ public class MathUtil {
         BigInteger val[]= new BigInteger[arr.length];
         BigInteger sum= BigInteger.valueOf(0);
         BigInteger b = BigInteger.valueOf(base);
-        int arrRev[] = ArrUtil.reverseArr(arr,arr.length);
+        int arrRev[] = ArrUtil.reverseArr(arr);
 
         for (int i = 0; i < arrRev.length; i++) {
             double j = (double)i;
