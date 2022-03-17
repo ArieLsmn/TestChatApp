@@ -74,33 +74,33 @@ public class MathUtil {
 
         digits = new int[i];
         --i;
-        ///System.out.println("digits:"+i);
-        BigInteger hasil2=val;
 
+        BigInteger hasil2 = val;
+        BigInteger sum;
+        BigInteger hasil3 = BigInteger.valueOf(0);
+        for (int jj = 0; i >= jj; jj++) {
 
-        for (int jj=0;i>=jj;jj++){
-
-            int k=0;
+            int k = 0;
             BigInteger powered;
-            BigInteger sum;
-            BigInteger hasil3=BigInteger.valueOf(0);
-            powered = test.pow(i-jj);
 
-            int comp2=0;
+            powered = test.pow(i - jj);
 
-            for (int kk=1;comp2>=0;kk++) {
+            int comp2 = 0;
 
-                subtr = powered.multiply(BigInteger.valueOf(kk));
-                sum = hasil2.subtract(subtr);
-                comp2 = sum.compareTo(BigInteger.valueOf(0));
-                if(comp2==1){
-                    hasil3=sum;
+            for (int kk = 1; comp2 > -1; kk++) {
+
+                BigInteger subtr2;
+                subtr2 = powered.multiply(BigInteger.valueOf(kk));
+                comp2 = hasil2.subtract(subtr2).compareTo(BigInteger.valueOf(0));
+                if(comp2!=-1) {
+                    sum = hasil2.subtract(subtr2);
+                    hasil3 = sum;
+                    k = kk;
                 }
-                k=kk;
+                else break;
             }
-            hasil2=hasil3;
-            digits[jj]=k-1;
-
+            hasil2 = hasil3;
+            digits[jj] = k;
         }
 
         return digits;
