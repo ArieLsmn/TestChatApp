@@ -16,7 +16,7 @@ public class GenerateKey {
     ECPrivateKey privKey;
     public GenerateKey() throws InvalidAlgorithmParameterException, NoSuchAlgorithmException {
 
-        String curveName = "secp256k1";
+        String curveName = "secp256r1";//secp256k1 no longer works
         ECGenParameterSpec ecGenSpec = new ECGenParameterSpec(curveName);
 
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("EC");
